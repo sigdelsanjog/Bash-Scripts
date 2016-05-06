@@ -1,0 +1,183 @@
+
+1) Using command to unlock the file or folder or getting privilage through terminal
+sudo chmod 777 www -R
+*****************************************************************************************
+2) Root privilage for editing in the terminal1
+sudo nautilus
+*****************************************************************************************
+3) LSPCI displays all the PCI drivers or external drivers used
+lspci
+*****************************************************************************************
+4) admin previllages
+sudo
+sudo su
+nautilus
+*****************************************************************************************
+5) To get the manual of any defined command
+man command
+*****************************************************************************************
+6) Creating a Directory
+cd nameod directory
+*****************************************************************************************
+7) going to main directory
+cd ./
+cd .//
+cd .?
+*****************************************************************************************
+8) Listing the files
+ls
+
+*****************************************************************************************
+9) Knowing the file hierarchy of Linus  OS architecture
+mah hier
+*****************************************************************************************
+10) If you have Error like following
+E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)
+E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
+
+type the followig in the terminal
+sudo rm -f /var/lib/dpkg/lock
+
+"This locks the folder dpkg"
+
+And after that also if the update process donot work then type the following in the terminal
+*****************************************************************************************
+11) sudo dpkg --configure -a
+"THis will show which process/packages is currently using the dpkg folder"
+
+*****************************************************************************************
+12)  run command or interactive shell with special root directory
+	chroot - 
+
+
+*****************************************************************************************
+13) Mysql errors
+	in PHPMYADMIN
+	username and password mismatch
+	IN TERMINAL	
+	i) locate config.default.php
+	ii) Go through the each command i.e. default settings written as default there
+	iii) $cfg['Servers'][$i]['user'] = 'root'; replace as
+		$cfg['Servers'][$i]['user'] = '';
+	iv)  replace $cfg['Servers'][$i]['passwd'] = 'root'; as
+		replace $cfg['Servers'][$i]['passwd'] = '';
+	v) Finally do this step
+	$cfg['Servers'][$i]['AllowNoPassword'] = true;
+	this allows login without a password
+*****************************************************************************************
+14) For opening any folder 
+	sudo xdg-open foldername
+*****************************************************************************************
+15) Best search in linux
+	sudo locate yourwordtobesearched
+*****************************************************************************************
+16) In the case your keyboard donot work and you need to reconfigure it.
+	 sudo dpkg-reconfigure keyboard-configuration
+*****************************************************************************************
+17) Shortcut in terminal to copying the text written in terminal line
+	press Ctrl+Shift+C
+*****************************************************************************************
+18) Shortcut in terminal to Paste the text written in terminal line
+	press Ctrl+Shift+V
+*****************************************************************************************
+19) MOUNTing a drive
+	Mounting mwans including the directory in the hierarchy of th elinux file system
+	use the command man mount for knowing about mount.
+	You can mount those folder which are unomounted and written insde the directory 
+	/etc/fstab
+******************************************************************************************
+20) UNMOUNT a drive
+	for unmounting a drive 
+	umount /media/drive_name
+	for more see 
+		man umount
+*******************************************************************************************
+21) to see the list of the directories that are mounted
+	mount -l
+*******************************************************************************************
+22) to mount a directory without writing in /etc/fstab 
+	mount -n /dir_to_mount
+*******************************************************************************************
+23  to display the battery status in terminal
+	acpi
+*******************************************************************************************
+*******************************************************************************************
+INTERFARE
+*******************************************************************************************
+*******************************************************************************************
+24) Editing the scroll bar in the terminal 
+	gsettings set com.canonical.desktop.interface scrollbar-mode normal
+*******************************************************************************************
+25) Reseting the above command in no 24.
+	ettings reset com.canonical.desktop.interface scrollbar-mode
+*******************************************************************************************
+26) Disabling the WiFi through terminal 
+	sudo nmcli nm wifi off
+*******************************************************************************************
+27) USING HOTSPOT 
+	i)   algosig@algosig:~$ sudo add-apt-repository ppa:nilarimogard/webupd8^C
+	ii)  algosig@algosig:~$ sudo apt-get update
+	iii) algosig@algosig:~$ sudo apt-get install ap-hotspot
+	iv)  algosig@algosig:~$ sudo ap-hotspot
+	v)   algosig@algosig:~$ sudo ap-hotspot configure
+	vi)  algosig@algosig:~$ sudo ap-hotspot start
+*******************************************************************************************
+28) Holding an app update
+	sudo apt-mark hold appname
+*******************************************************************************************
+29) Restarting the network manager service 
+	sudo service network-manager restart
+*******************************************************************************************
+30) Changing your password
+	sudo passwd
+	**first enter the recent password and you will be asked to enter new password**
+*******************************************************************************************
+31)	You can remove sudo for asking for a password;
+	just type:	visudo
+	and you will be editing a file, modify the line %sudo with
+
+	%sudo ALL=(ALL) NOPASSWD: ALL
+
+	and all sudo members won't be asked for a password.
+*******************************************************************************************
+*******************************************************************************************
+For Second Edition
+*******************************************************************************************
+*******************************************************************************************
+
+
+1) Refine your search
+	locate python | grep install
+	Output: // Displays all the filename with python and highlights the word install
+		/usr/share/app-install/icons/fontypython.png
+		/usr/share/app-install/icons/ipython.svg
+		/usr/share/app-install/icons/ipython3.svg
+		/usr/share/doc/python/faq/installed.html
+		/usr/share/doc/python-pip/installing.rst
+		/usr/share/doc/python-pip/reference/pip_install.rst.gz
+		/usr/share/doc/python-pip/reference/pip_uninstall.rst
+		/usr/share/doc/python-pygments/installation.html
+		/usr/share/doc/python-setuptools/easy_install.txt.gz
+		/usr/share/python/runtime.d/public_modules.rtinstall
+		/usr/share/python/runtime.d/python-support.rtinstall
+		/usr/share/python3/runtime.d/public_modules.rtinstall
+		/var/lib/python/python3.4_installed
+*******************************************************************************************
+2) Enabling wifi 
+	sudo ip link set wlan0 up
+	or
+	sudo nmcli nm wifi on
+3) Viewing the  history of what the software updater updated in your system.
+	/var/log/apt/history.log
+
+4) In order to hold updating the packages
+	sudo apt-mark hold hostapd //this will hold hostapd for future update
+5) The default location for starting an application on the startup is al
+	/usr/bin/filename
+	if you want to open prolog type
+	/usr/bin/prolog    // THis opens a prolog compiler.
+
+
+6) For running any graphic application as supersuer 
+	gsku // then type the application you want to 
+	     // run in the graphical interface.
