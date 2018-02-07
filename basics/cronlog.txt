@@ -1,0 +1,10 @@
+CRONJOB basescript executed at 
+ ------------------------------------
+ File  eceuted
+CRONJOB basescript executed at 
+ ------------------------------------
+SCRIPT CALLED FROM ANOTHER FILE
+CRONJOB basescript executed at 
+ ------------------------------------
+SCRIPT CALLED FROM ANOTHER FILE
+ File  eceuted
