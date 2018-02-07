@@ -1,6 +1,0 @@
-one line 
-two line 
-three
-line
-random texts \br \new \line in a file 'ls -a' 
-random texts \br \new \line in a file 'ls -a' 
